@@ -2,12 +2,11 @@
 A simple password generator in Python
 
 Options:
-1) Generate multiples password
-2) Choose how many characters
-3) Special characters
-4) Numbers
-5) Letters
-6) Uppercase
-7) Lowercase
+1) Choose how many characters
+2) Special characters
+3) Numbers
+4) Letters
+5) Uppercase
+6) Lowercase
 
 You welcome.
