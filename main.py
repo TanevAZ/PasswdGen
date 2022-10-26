@@ -6,7 +6,7 @@ def PasswdGen():
     passwdLength = int(input("Enter the length of password : "))
     passwdCount = int(input("How many passwords do you want to generate : "))
     saveToFile = input("Do you want to save the passwords to a file (y/n) : ")
-    passwdChars = string.ascii_letters + string.digits + string.punctuation + random.choice(string.ascii_uppercase) + random.choice(string.ascii_lowercase) + random.choice(string.digits) + random.choice(string.punctuation)
+    passwdChars = string.ascii_letters + string.digits + string.punctuation + string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation
     password = []
     passwdList = []
 
