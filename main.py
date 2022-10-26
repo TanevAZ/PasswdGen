@@ -23,6 +23,7 @@ def PasswdGen():
         filename = input("Enter the file name : ")
         if filename == '':
             filename = "passwords.txt"
+            print(f"Passwords saved to default file name : {filename}")
             
         desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
         filePath = input(f"Enter the file path (default path : {desktop}\{filename} ) : ")
