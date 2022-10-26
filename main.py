@@ -3,15 +3,15 @@ import string
 import os
 
 def PasswdGen():
-    password_length = int(input("Enter the length of password : "))
-    password_count = int(input("How many passwords do you want to generate : "))
-    save_to_file = input("Do you want to save the passwords to a file (y/n) : ")
+    passwdLength = int(input("Enter the length of password : "))
+    passwdCount = int(input("How many passwords do you want to generate : "))
+    saveToFile = input("Do you want to save the passwords to a file (y/n) : ")
     passwdChars = string.ascii_letters + string.digits + string.punctuation + random.choice(string.ascii_uppercase) + random.choice(string.ascii_lowercase) + random.choice(string.digits) + random.choice(string.punctuation)
     password = []
     passwdList = []
 
-    for x in range(0, password_count):
-        for y in range(0, password_length):
+    for x in range(0, passwdCount):
+        for y in range(0, passwdLength):
             password.append(random.choice(passwdChars))
         passwdList.append(''.join(password))
         password = []
@@ -19,7 +19,7 @@ def PasswdGen():
     for password in passwdList:
         print(password)
 
-    if save_to_file == 'y':
+    if saveToFile == 'y':
         filename = input("Enter the file name : ")
         if filename == '':
             filename = "passwords.txt"
