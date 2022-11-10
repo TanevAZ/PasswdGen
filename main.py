@@ -1,9 +1,32 @@
 import random
 import string
+import platform
 import os
+from colorama import Fore
+
+pm = platform.system()
+if pm == "Windows":
+    os.system("cls")
+elif pm == "Linux":
+    os.system("clear")
+elif pm == "Darwin":
+    os.system("clear")
+banner = Fore.RED + f"""
+                        ______                          _ _____            
+                        | ___ \                        | |  __ \           
+                        | |_/ /_ _ ___ _____      ____ | | |  \/ ___ _ __  
+                        |  __/ _` / __/ __ \ \ /\ / / _` | | __ / _ \ '_ \ 
+                        | | | (_| \__ \__ \ \ V  V / (_| | |_\ \  __/ | | |
+                        \_|  \__,_|___/___/  \_/\_/ \__,_|\____/\___|_| |_|
+
+                               Github : https://github.com/TanevAZ
+"""
+
+print(banner)
 
 def PasswdGen():
-    passwdLength = int(input("Enter the length of password : "))
+    # password length
+    passwdLength = int(input(f"{Fore.RESET}Enter the length of password : "))
     passwdCount = int(input("How many passwords do you want to generate : "))
     saveToFile = input("Do you want to save the passwords to a file (y/n) : ")
     passwdChars = string.ascii_letters + string.digits + string.punctuation + string.ascii_uppercase + string.ascii_lowercase + string.digits
